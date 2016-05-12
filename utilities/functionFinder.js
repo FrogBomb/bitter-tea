@@ -9,8 +9,10 @@ function findFunctionNames(codestr){
         An array of the function names from the input string. WILL NOT FIND ANONYMOUS FUNCTIONS
         OR FUNCTIONS INSIDE ANOTHER FUNCTION CONTEXT!
     */
-    var funcRE = /^(?:[^\{(?!\})]\s*function\s*)[\w]+\s*(?=\()/g;
-    return funcRE.match(codestr); 
+    var firstLayerCodestr = codestr.split("{").map(function(val){return val.slice(val.lastIndexOf("}"));}).join('{...}');
+    
+    return firstLayerCodestr.match(/function\s+\w+/g).map(function(val){return val.slice(val.lastIndexOf(" "));})
+                                                   
 }
 
 function findFunctions(codestr){//The worst code ever. 
