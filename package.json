@@ -1,0 +1,24 @@
+{
+  "name": "bitter-tea",
+  "version": "1.0.0",
+  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "directories": {
+    "test": "tests"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/coobreez/bitter-tea.git"
+  },
+  "bugs": {
+    "url": "https://github.com/coobreez/bitter-tea/issues"
+  },
+  "homepage": "https://github.com/coobreez/bitter-tea#readme",
+  "description": ""
+}
