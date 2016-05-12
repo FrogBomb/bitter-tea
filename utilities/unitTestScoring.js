@@ -17,7 +17,7 @@ var unitTestScoring = function(functionToTest, comp){
             Parameter of the output that keeps a score. Initially will be 0.
             
             
-    STATIC METHODS:
+    STATICS:
         unitTestScoring
             .getTotalScore      : < function () -> int >
                 Return the total score of all unit tests.
