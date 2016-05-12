@@ -17,6 +17,7 @@ function findFunctions(codestr){
     /*
         Returns an object with keys to the functions defined in codestr
     */
+//    eval(codestr);
     
 }
 
