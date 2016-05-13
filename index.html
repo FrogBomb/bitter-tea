@@ -11,7 +11,7 @@
 
     <!-- build:css css/combined.css -->
     <link href="../css/one.css" rel="stylesheet">
-    <link href="../css/two.css" rel="stylesheet">
+    <!--<link href="../css/two.css" rel="stylesheet">-->
     <!-- endbuild -->
 </head>
 <body>
@@ -26,6 +26,12 @@
 
     newButton();
 
+
+    var dummy = '<span>Label: <input type="text"><small>(ft)</small></span>\r\n';
+    document.getElementById('wrapper').innerHTML += dummmy;
+
+
+
 </script>
 
 
@@ -35,17 +41,17 @@
     <header><h1>Bitter Tea</h1></header>
 
         <div class="row">
-            <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4" id="left">
+            <div class="col-xs-6 col-sm-6 col-md-6 col-lg-3" id="left" align="center">
                 <h2>{{FUNCTION INPUTS HERE}}</h2>
+                <textarea rows="15" cols="70"></textarea>
             </div>
 
-            <div class="col-xs-12 col-sm-4 col-md-4 col-lg-8" id="right">
+            <div class="col-xs-6 col-sm-6 col-md-6 col-lg-3" id="right" align="center">
                 <div>
                     <h2>{{INPUTS HERE}}</h2>
                     <div class="form-group">
-                        <label class="col-md-4 control-label" for="textarea">Text Area</label>
+                        <textarea rows="15" cols="70"></textarea>
                     </div>
-
                 </div>
             </div>
 
@@ -55,6 +61,11 @@
         <div class="col-xs-12 col-sm-12 col-md-12 col-lg-10" id="outputs">
             <div>
                 <h2>{{OUTPUTS}}</h2>
+
+                <INPUT TYPE="BUTTON" VALUE="Edit" class="styled-button-2" id="makeNewInput">
+
+
+
             </div>
         </div>
     </div>
