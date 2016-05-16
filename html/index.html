@@ -32,25 +32,45 @@
 	<!--header-->
 	<div class="dkGrey">
 		<h1 class="title">bitter tea</h1>
+		<p class="centerThis subtitle">The game for Unit Testing</p>
 	</div>
-	<div class="container pad-sides-50 centerThis">
-		<div class="row">
-			<div class="col-md-6">
-				<h3>About</h3>
-				<p>In this game you can test your functions and win points if your expected outputs are correct!</p>
-			</div>
-			<div class="col-md-6">
-				<h3>How it Works</h3>
-				<p>Simply put the function to test in the box labeled function, and then create the test parameters in the Unit Test area. You can run as many tests as you like for each function. Every time that your expected output matches the actual output you gain a point, but when it doesn't match you lose one.</p>
-			</div>
-		</div>
+	<div class="pad-info centerThis">
 
+		<h3>How it Works</h3>
+		<p>Simply put the function to test in the box labeled function, and then create the test parameters in the Unit Test area. You can run as many tests as you like for each function. Every time that your expected output matches the actual output you gain a point, but when it doesn't match you lose one.</p>
 	</div>
+
 
 	<!--Inputs-->
-	
+	<div class="container">
+		<div class="row">
+			<div class="col-sm-12 col-md-6">
+				<h4 class="sub2 centerThis">Function</h4>
+				<textarea placeholder="Write your functions here" cols="53" rows="30"></textarea>
+			</div>
+			<div class="container col-sm-12 col-md-6">
+				<h4 class="sub2 centerThis">Unit Tests</h4>
+				<br />
+				<button>Add New Test</button>
+				<br />
+				<div class="test">
+					<h5>Test One</h5>
+					<input placeholder="parameters">
+					<input placeholder="expected outcome">
+					<br />
+				</div>
+
+			</div>
+		</div>
+	</div>
 
 	<!--Score-->
+	<div class="dkGrey centerThis">
+		<h3 class="yourScore pad-top-30">Your Score: </h3>
+		<ul class="list pad-bottom-30">
+			<li>Test 1: actual output = , score = +1</li>
+		</ul>
+	</div>
 
 
 
