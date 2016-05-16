@@ -1,15 +1,83 @@
 <!DOCTYPE html>
-<html lang="">
-<head>
-    <meta charset="UTF-8">
-    <title>Bitter Tea</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
+<html lang="en">
 
-    <link href="./css/combined.css" rel="stylesheet">
-    
+<head>
+	<meta charset="UTF-8">
+	<title>Bitter Tea</title>
+
+	<!-- Bootstrap  -->
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+	<!-- Optional theme -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+
+	<!-- Css Styles -->
+	<link href="./css/combined.css" rel="stylesheet">
+
+	<!--Include Fonts-->
+	<link href='https://fonts.googleapis.com/css?family=Kanit:400,700,200italic|Codystar' rel='stylesheet' type='text/css'>
+
 </head>
+
 <body>
 
-    <script src="./scripts/combined.js"></script>
+	<!--START Editing-->
+
+
+
+	<!--header-->
+	<div class="dkGrey">
+		<h1 class="title">bitter tea</h1>
+		<p class="centerThis subtitle">The game for Unit Testing</p>
+	</div>
+	<div class="pad-info centerThis">
+
+		<h3>How it Works</h3>
+		<p>Simply put the function to test in the box labeled function, and then create the test parameters in the Unit Test area. You can run as many tests as you like for each function. Every time that your expected output matches the actual output you gain a point, but when it doesn't match you lose one.</p>
+	</div>
+
+
+	<!--Inputs-->
+	<div class="container">
+		<div class="row">
+			<div class="col-sm-12 col-md-6">
+				<h4 class="sub2 centerThis">Function</h4>
+				<textarea placeholder="Write your functions here" cols="53" rows="30"></textarea>
+			</div>
+			<div class="container col-sm-12 col-md-6">
+				<h4 class="sub2 centerThis">Unit Tests</h4>
+				<br />
+				<button>Add New Test</button>
+				<br />
+				<div class="test">
+					<h5>Test One</h5>
+					<input placeholder="parameters">
+					<input placeholder="expected outcome">
+					<br />
+				</div>
+
+			</div>
+		</div>
+	</div>
+
+	<!--Score-->
+	<div class="dkGrey centerThis">
+		<h3 class="yourScore pad-top-30">Your Score: </h3>
+		<ul class="list pad-bottom-30">
+			<li>Test 1: actual output = , score = +1</li>
+		</ul>
+	</div>
+
+
+
+
+	<!--END Editing-->
+	<script src="./scripts/combined.js"></script>
+
 </body>
+
 </html>
