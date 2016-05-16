@@ -5,21 +5,33 @@ var del = require('del');
 var useref = require('gulp-useref');
 var concat = require('gulp-concat');
 
+//gulp.task(
+//	'watch',
+//	function () {
+//		watch('./**/*', function (events) {
+//			gulp.start('default');
+//		});
+//	}
+//);
+
 
 gulp.task('clean', function(){
     return del(['./dist/index.html', './dist/scripts/*', './dist/css/*']);
 });
+
 
 gulp.task('moveHTML',['clean'], function(){
     return gulp.src('./html/*.html')
         .pipe(gulp.dest('dist'));
 });
 
+
 gulp.task('combineJS', ['clean'], function(){
     return gulp.src('./lib/**/*.js')
         .pipe(concat('combined.js'))
         .pipe(uglify())
         .pipe(gulp.dest('./dist/scripts/'));
+
 });
 
 gulp.task('combineCSS', function(){
