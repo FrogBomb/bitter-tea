@@ -5,14 +5,14 @@ var del = require('del');
 var useref = require('gulp-useref');
 var concat = require('gulp-concat');
 
-gulp.task(
-	'watch',
-	function () {
-		watch('./**/*', function (events) {
-			gulp.start('default');
-		});
-	}
-);
+//gulp.task(
+//	'watch',
+//	function () {
+//		watch('./**/*', function (events) {
+//			gulp.start('default');
+//		});
+//	}
+//);
 
 
 gulp.task('clean', function(){
@@ -40,4 +40,4 @@ gulp.task('combineCSS', function(){
         .pipe(gulp.dest('./dist/css'));
 });
 
-gulp.task('default', ['clean','combineJS', 'combineCSS']);
+gulp.task('default', ['clean','combineJS', 'combineCSS', 'moveHTML']);

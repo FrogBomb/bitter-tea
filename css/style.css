@@ -1,20 +1,50 @@
 body {
 	font-family: 'Kanit', sans-serif;
+	margin: 0px;
 }
+
+html {
+margin: 0px;
+}
+
+h2, h3, h4, h5, h6 {
+	text-transform: uppercase;
+	color: #c5cfd3;
+	font-weight: 700px;
+	text-align: center;
+}
+
 
 .title {
 	font-family: 'Codystar', cursive;
-	color: FFD879;
+	color: #ffc951;
+	text-align: center;
+	text-transform: uppercase;
+	padding-top: 50px;
+	padding-bottom: 50px;
+	font-size: 75px;
+	letter-spacing: 5px;
 }
 
 .ltGrey {
-	background-color: AAA59F;
+	background-color: #c5cfd3;
 }
 
 .dkGrey {
-	background-color: 363D3D;
+	background-color: #505859;
 }
 
 .ltOrange {
-	background-color: FFD879;
+	background-color: #ffc951;
+}
+
+.centerThis {
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.pad-sides-50 {
+	padding-left: 50px;
+	padding-right: 50px;
 }
