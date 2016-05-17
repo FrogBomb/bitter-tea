@@ -1,0 +1,13 @@
+
+function squareRoot (n, root) {
+
+return Math.pow(n, 1/root);
+}
+
+function cubed (n) {
+  return n * n;
+}
+
+function capitalize (string) {
+    return string.charAt(0).toUpperCase() + string.slice(1);
+}
