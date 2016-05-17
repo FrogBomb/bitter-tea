@@ -106,6 +106,7 @@ textarea {
 .test {
 	width: 100%;
 	border: 1px solid #ffc951;
+	margin-bottom: 10px;
 }
 
 .testTitle {
