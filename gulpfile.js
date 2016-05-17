@@ -40,4 +40,9 @@ gulp.task('combineCSS', function(){
         .pipe(gulp.dest('./dist/css'));
 });
 
+gulp.task('putUtilInTests', function(){
+    return gulp.src('./lib/utilities/*.js')
+        .pipe(gulp.dest('tests'));
+});
+
 gulp.task('default', ['clean','combineJS', 'combineCSS', 'moveHTML']);
