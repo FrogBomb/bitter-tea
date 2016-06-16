@@ -25,11 +25,11 @@
 
 <body>
 
-<!--START Editing-->
+	<!--START Editing-->
 
 
 
-<!--header-->
+	<!--header-->
 	<div class="dkGrey">
 		<h1 class="title">bitter tea</h1>
 		<p class="centerThis subtitle">The game for Unit Testing</p>
@@ -41,35 +41,40 @@
 	</div>
 
 
-<!--Inputs-->
+	<!--Inputs-->
 
 	<div class="container">
 		<div class="row">
 
-<!--	Function-->
+			<!--	Function-->
 			<div class="col-sm-12 col-md-6">
 				<h4 class="sub2 centerThis">Function</h4>
 				<br />
-				<textarea id = "functionText" placeholder="Write your functions here" cols="53" rows="30"></textarea>
+				<div class="centerThis">
+					<textarea id="functionText" placeholder="Write your functions here. This is for you Halie." cols="53" rows="30"></textarea>
+				</div>
 			</div>
 
-<!--	Unit Tests-->
+			<!--	Unit Tests-->
 			<div id="unitTestCont" class="container col-sm-12 col-md-6">
 				<div>
 					<h4 class="sub2 centerThis">Unit Tests</h4>
 					<br />
-					
-<!--	BUTTON to add another test = className to Use: addNewTest 			-->
-					<button class="addNewTest">Add New Test</button>
+
+					<!--	BUTTON to add another test = className to Use: addNewTest 			-->
+					<button onclick="addNewTestElement()" class="addNewTest">Add New Test</button>
 				</div>
 				<br />
 				<div class="test pad-15 centerThis">
 					<div class="testTitle">
 						Function:
-						
-<!--    populate function name selection = className to Use: functionName		-->
+
+						<!--    populate function name selection = className to Use: functionName		-->
 						<select class="functionName">
-							<option value="string">Placeholder Function Name</option>
+
+							<option value="cubed">cubed</option>
+							<option value="squareRoot">squareRoot</option>
+							<option value="capitalize">capitalize</option>
 						</select> || Test 1
 					</div>
 					<br />
@@ -77,35 +82,35 @@
 
 						<div>
 							<label style="color:#ffc951">How many types of parameters are you using?</label>
-							
-<!--	Determine number of Parameters = className to Use: paramNumber			-->
+
+							<!--	Determine number of Parameters = className to Use: paramNumber			-->
 							<input type="number" class="paramNumber">
 						</div>
 						<div>
 							<label style="color:#ffc951">Type of Parameter: </label>
-<!--							<br />-->
-						
-<!--	Select Type of parameter = className to Use: paramType			-->
+							<!--							<br />-->
+
+							<!--	Select Type of parameter = className to Use: paramType			-->
 							<select class="paramType">
 								<option value="string">String</option>
 								<option value="integer">Integer</option>
 								<option value="float">Float</option>
 							</select>
-							
-<!--	Pull parameter Input = className to Use: 	paramInput		-->
+
+							<!--	Pull parameter Input = className to Use: 	paramInput		-->
 							<input placeholder="parameter" class="paramInput">
 						</div>
 						<br />
-						
-<!--	Pull expected outcome = className to Use: expectedOutcome		-->
+
+						<!--	Pull expected outcome = className to Use: expectedOutcome		-->
 						<input placeholder="expected outcome" class="expectedOutcome">
 					</div>
 					<br />
-					
-<!--	Run Test = className to Use: runTest		-->
-					<button class="runTest">Run Test</button>
-					
-<!--	Delete Test = className to Use: deleteTest		-->
+
+					<!--	Run Test = className to Use: runTest		-->
+					<button onclick="onTest1()" class="runTest">Run Test</button>
+
+					<!--	Delete Test = className to Use: deleteTest		-->
 					<button class="deleteTest">Delete Test</button>
 				</div>
 
@@ -113,17 +118,18 @@
 		</div>
 	</div>
 
-<!--Score-->
+	<!--Score-->
 	<div class="dkGrey centerThis">
 		<h3 class="yourScore pad-top-30">Your Score: </h3>
 		<ul class="list results pad-bottom-30">
+			<li>Function Name || Test Number || Acutal Output || Score</li>
 		</ul>
 	</div>
 
 
 
 
-<!--END Editing-->
+	<!--END Editing-->
 	<script src="./scripts/combined.js"></script>
 
 </body>
