@@ -4,7 +4,9 @@ var gulpIf = require('gulp-if');
 var del = require('del');
 var useref = require('gulp-useref');
 var concat = require('gulp-concat');
-var handlebars = require('handlebars');
+var handlebars = require('gulp-handlebars');
+var wrap = require('gulp-wrap');
+var declare = require('gulp-declare');
 
 //gulp.task(
 //	'watch',
@@ -24,7 +26,7 @@ gulp.task('handlebars', ['clean'], function(){
       noRedeclare: true, // Avoid duplicate declarations 
     }))
     .pipe(concat('hbsTemplates.js'))
-  	.pipe(uglify())
+//  	.pipe(uglify())
     .pipe(gulp.dest('lib/js/handlebars'));
 });
 
@@ -42,7 +44,7 @@ gulp.task('moveHTML',['clean'], function(){
 gulp.task('combineJS', ['clean', 'handlebars'], function(){
     return gulp.src('./lib/**/*.js')
         .pipe(concat('combined.js'))
-        .pipe(uglify())
+//        .pipe(uglify())
         .pipe(gulp.dest('./dist/scripts/'));
 
 });
