@@ -4,6 +4,7 @@ var gulpIf = require('gulp-if');
 var del = require('del');
 var useref = require('gulp-useref');
 var concat = require('gulp-concat');
+var handlebars = require('handlebars');
 
 //gulp.task(
 //	'watch',
@@ -14,6 +15,18 @@ var concat = require('gulp-concat');
 //	}
 //);
 
+gulp.task('handlebars', ['clean'], function(){
+  gulp.src('./lib/handlebars/*.hbs')
+    .pipe(handlebars())
+    .pipe(wrap('Handlebars.template(<%= contents %>)'))
+    .pipe(declare({
+      namespace: 'RadioWars.templates',
+      noRedeclare: true, // Avoid duplicate declarations 
+    }))
+    .pipe(concat('hbsTemplates.js'))
+  	.pipe(uglify())
+    .pipe(gulp.dest('lib/js/handlebars'));
+});
 
 gulp.task('clean', function(){
     return del(['./dist/index.html', './dist/scripts/*', './dist/css/*']);
@@ -26,7 +39,7 @@ gulp.task('moveHTML',['clean'], function(){
 });
 
 
-gulp.task('combineJS', ['clean'], function(){
+gulp.task('combineJS', ['clean', 'handlebars'], function(){
     return gulp.src('./lib/**/*.js')
         .pipe(concat('combined.js'))
         .pipe(uglify())
@@ -45,4 +58,4 @@ gulp.task('putUtilInTests', function(){
         .pipe(gulp.dest('tests'));
 });
 
-gulp.task('default', ['clean','combineJS', 'combineCSS', 'moveHTML']);
+gulp.task('default', ['clean','handlebars','combineJS', 'combineCSS', 'moveHTML']);
